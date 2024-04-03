@@ -2,13 +2,15 @@ def say_hello
     puts "Hello"
 end
 
-puts say_hello
-
-def say_hello_name
-    puts "What's tour name?"
+def ask_first_name
+    puts "Quel est ton prénom ?"
     print ">"
     first_name = gets.chomp
+    return first_name
+end
+
+def say_hello(first_name)
     puts "Bonjour, #{first_name}"
 end
 
-puts say_hello_name
+say_hello(ask_first_name)
